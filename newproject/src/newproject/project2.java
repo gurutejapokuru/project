@@ -42,7 +42,7 @@ public class project2 {
 	
 	driver.findElement(By.xpath("//button[@id='sbin-gxo-btn']")).click();
 	
-	WebElement firstname=driver.findElement(By.id("af-address1"));
+	WebElement firstname=driver.findElement(By.id("af-first-name"));
 	
 	
 	firstname.sendKeys("guruteja");
