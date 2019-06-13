@@ -42,15 +42,29 @@ public class project2 {
 	
 	driver.findElement(By.xpath("//button[@id='sbin-gxo-btn']")).click();
 	
-	WebElement firstname=driver.findElement(By.id("af-first-name"));
+	driver.findElement(By.cssSelector("input[ type='text']")).sendKeys("guruteja");
+	
+	driver.findElement(By.cssSelector("input[ autocomplete='family-name']")).sendKeys("pokuru");
+	
+	driver.findElement(By.cssSelector("input[ autocomplete='address-line1']")).sendKeys("parkroad");
 	
 	
-	firstname.sendKeys("guruteja");
-	WebElement lastname=driver.findElement(By.cssSelector("span[class='floating-label']"));
+	driver.findElement(By.cssSelector("input[ autocomplete='address-line2']")).sendKeys("unit505,homebush,double bedroom");
 	
-	lastname.sendKeys("pokuru");
+	driver.findElement(By.cssSelector("input[id='city']")).sendKeys("sydney");
 	
+	WebElement state=driver.findElement(By.cssSelector("select[autocomplete='address-level1']"));
 	
+	Select ab=new Select(state);
+	
+	ab.selectByIndex(2);
+	
+	driver.findElement(By.cssSelector("input[autocomplete='email']")).sendKeys("gurutejaaus16@gmail.com");
+	
+	driver.findElement(By.cssSelector("input[class='input-field af-email-confirm']")).sendKeys("gurutejaaus16@gmail.com");
+	    driver.findElement(By.cssSelector("input[autocomplete='tel']")).sendKeys("0992992");
+	
+    driver.findElement(By.cssSelector( "button[ class='btn btn--primary guest-address-btn']")).click();
 	
 
 	
